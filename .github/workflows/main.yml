@@ -115,7 +115,7 @@ jobs:
 
       - name: setup kernelsu
         run: |
-          curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
+          curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
           echo 'CONFIG_KPROBES=y' >> arch/arm64/configs/${{ env.defconfig }}
 
           cd KernelSU
